@@ -10,59 +10,87 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition ></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
 
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
+           
+            <RowDefinition Height="100"></RowDefinition>
             <RowDefinition></RowDefinition>
+            
+
 
         </Grid.RowDefinitions>
 
-        <Label
+        <ListBox
                Foreground="Purple"
                VerticalAlignment="Center"
                HorizontalAlignment="Center"
                BorderBrush="Purple"
                BorderThickness="3"
-                FontSize="40"
-                Width="200"
+                Grid.ColumnSpan="2"
+                FontSize="20"
+                Width="500"
                 Height="300"
-                x:Name="eredmenylbl">
-            
-        </Label>
+                x:Name="lberedmeny">
+
+        </ListBox>
         <Label x:Name="lblfajlmegjelenito"
+               VerticalAlignment="Center"
+               Grid.ColumnSpan="2"
                Foreground="Purple"
                Background="Wheat" 
+               Height="80"
                Grid.Row="1"
-               FontSize="40"
-               BorderBrush="Black"
+               FontSize="20"
                BorderThickness="5"
-            
-               
+               BorderBrush="Black"
+               Margin="10"
+               Padding="10" 
                />
 
+        <TextBox x:Name="adatbeviteltb"
+                 Grid.Row="1"
+                 Grid.Column="2"
+                 Margin="10"
+                 Padding="10"
+                 Foreground="Purple"
+                 Background="Wheat"
+                 FontSize="25"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Center"
+                 BorderBrush="Black"
+                BorderThickness="5"
+                 >Kérek egy kifejezést:</TextBox>
 
         <Button x:Name="inditogomb"
                 Foreground="Purple"
                 Background="Wheat"
-                Grid.Row="1"
-                Grid.Column="1"
-                Content="Nyomj Meg"
+                Grid.Row="2"
+                Grid.ColumnSpan="2"
+                Content="Indito Gomb"
                 FontSize="50" Click="inditogomb_Click"
-                 BorderBrush="Black"
-                  BorderThickness="5">
-            
+                BorderBrush="Black"
+                BorderThickness="5"
+                Margin="10"
+                Padding="10">
+                 
         </Button>
-        <Button x:Name="feladatmegoldogomb"
+
+        <Button x:Name="mentesbtn"
                 Foreground="Purple"
                 Background="Wheat"
-                Grid.Row="0"
-                Grid.Column="1"
-                Content="számolo"
-                FontSize="50" 
-                 BorderBrush="Black"
-                  BorderThickness="5" Click="feladatmegoldogomb_Click">
+                Grid.Row="2"
+                Grid.Column="2"
+                Content="Mentés"
+                FontSize="50" Click="inditogomb_Click"
+                BorderBrush="Black"
+                BorderThickness="5"
+                Margin="10"
+                Padding="10">
 
         </Button>
+
     </Grid>
 </Window>
