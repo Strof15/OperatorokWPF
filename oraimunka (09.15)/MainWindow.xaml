@@ -1,0 +1,188 @@
+﻿<Window x:Class="operatorokwpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:operatorokwpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="750" Width="800"
+>
+    <Border Background="Wheat" CornerRadius="20" BorderBrush="Black" BorderThickness="10"
+            Margin="10">
+        <Viewbox>
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition ></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition  Height="200"></RowDefinition>
+                    <RowDefinition Height="200"></RowDefinition>
+                    <RowDefinition Height="100"></RowDefinition>
+                    <RowDefinition Height="100"></RowDefinition>
+                    <RowDefinition Height="100"></RowDefinition>
+
+
+
+                </Grid.RowDefinitions>
+
+                <ListBox
+               Foreground="Purple"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"
+               BorderBrush="Purple"
+               BorderThickness="3"
+                Grid.RowSpan="2"
+                Grid.ColumnSpan="3"
+                FontSize="20"
+                Width="700"
+                Height="380"
+                x:Name="lberedmeny">
+
+                </ListBox>
+                <Label x:Name="lblfajlmegjelenito"
+               VerticalAlignment="Center"
+               Grid.ColumnSpan="2"
+               Foreground="Blue"
+               Background="Wheat" 
+               Height="80"
+               Grid.Row="3"
+               FontSize="20"
+               BorderThickness="5"
+               BorderBrush="Black"
+               Margin="10"
+               Padding="10" 
+               />
+                <StackPanel Grid.Row="2" Grid.ColumnSpan="3" Orientation="Horizontal">
+
+                    <Label x:Name="lbltextboxneve"
+               VerticalAlignment="Center"                          
+               Foreground="Blue"
+               Background="Wheat" 
+               Height="80"
+               FontSize="28"
+               BorderThickness="5"
+               BorderBrush="Black"
+               Margin="10"
+               Padding="10">Adjon meg egy kifejezést: (pl.: 1 + 1):</Label>
+
+                <TextBox x:Name="tbOperandusA"
+                    Margin="10"
+                    Padding="10"
+                    Foreground="Purple"
+                    Background="Wheat"
+                    FontSize="25"
+                    Width="80"
+                    Height="80"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    BorderBrush="Black"
+                    BorderThickness="5" TextChanged="adatbeviteltb_TextChanged"
+                 ></TextBox>
+                    
+                <TextBox
+                    x:Name="tbmMveletiJel"
+                    Margin="10"
+                    Padding="10"
+                    Foreground="Purple"
+                    Background="Wheat"
+                    FontSize="25"
+                    Width="80"
+                    Height="80"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    BorderBrush="Black"
+                    BorderThickness="5" TextChanged="adatbeviteltb_TextChanged"
+                 ></TextBox>
+                    
+                 <TextBox x:Name="tbOperandusB"
+                    Margin="10"
+                    Padding="10"
+                    Foreground="Purple"
+                    Background="Wheat"
+                    FontSize="25"
+                    Width="80"
+                    Height="80"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    BorderBrush="Black"
+                    BorderThickness="5" TextChanged="adatbeviteltb_TextChanged"
+                 ></TextBox>
+
+
+
+                    <Label 
+                    x:Name="szamolomegjelenitolbl"
+                    VerticalAlignment="Center"
+                    Foreground="Blue"
+                    Background="Wheat" 
+                    Height="80"
+                    Width="400"    
+                    FontSize="20"
+                    BorderThickness="5"
+                    BorderBrush="Black"
+                    Margin="10"
+                    Padding="10"></Label>
+                    
+                </StackPanel>
+
+
+
+
+                <Button x:Name="Szamologomb"
+                Foreground="Purple"
+                Background="Wheat"
+                Grid.Row="3"
+                Grid.Column="2"
+                Content="Számol Gomb"
+                FontSize="30" Click="Szamologomb_Click"
+                BorderBrush="Black"
+                BorderThickness="5"
+                Width="230"
+                 Height="80"
+                Margin="10"
+                Padding="10" VerticalAlignment="Top"></Button>
+
+                <Button x:Name="inditogomb"
+                Foreground="Purple"
+                Background="Wheat"
+                Grid.Row="4"
+                Grid.ColumnSpan="2"
+                Content="Fájl kiválasztása"
+                FontSize="40" Click="inditogomb_Click"
+                BorderBrush="Black"
+                BorderThickness="5"
+                Height="80"
+                Margin="10,10,10,0"
+                Padding="10" VerticalAlignment="Top"
+                >
+
+                </Button>
+
+                <Button x:Name="mentesbtn"
+                Foreground="Purple"
+                Background="Wheat"
+                Grid.Row="4"
+                Grid.Column="2"
+                Content="Mentés"
+                FontSize="40" Click="Mentesgomb_Click"
+                BorderBrush="Black"
+                BorderThickness="5"
+                Margin="0,10,0,0"
+                Padding="10"
+                Width="230"
+                Height="80"
+                HorizontalAlignment="Center" VerticalAlignment="Top"
+                
+                >
+
+
+                </Button>
+
+            </Grid>
+        </Viewbox>
+    </Border>
+</Window>
